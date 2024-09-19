@@ -16,3 +16,6 @@ map('n', '<leader>h',  '<cmd>:ToggleTerm size=20 direction=horizontal<cr>', {des
 
 -- Terminal Mode
 map('t', '<C-/>', '<C-\\><C-n>:ToggleTerm<cr>', { desc = 'Hide Terminal' })
+
+-- Visual Mode
+map( 'v', '<C-c>', ':w !pbcopy<CR><Esc>', { desc = 'Copy to transfer area'})
