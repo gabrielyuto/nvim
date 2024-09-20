@@ -41,3 +41,9 @@ commands('filetype plugin on') -- Ativa plugins de tipo de arquivo
 commands('filetype indent on') -- Ativa scripts de indentação de tipo de arquivo
 
 -- Configurações extras podem ser adicionadas aqui conforme necessário
+
+
+-- Defina o método de fold
+vim.o.foldmethod = 'indent'  -- Usa a indentação para folding
+vim.o.foldlevel = 99         -- Garante que o código não seja recolhido ao abrir um arquivo
+vim.o.foldenable = true      -- Habilita o folding por padrão
