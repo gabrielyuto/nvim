@@ -21,18 +21,42 @@ local function setup_lualine()
     sections = {
       lualine_a = {'mode'},
       lualine_b = {'branch', 'diff', 'diagnostics'},
-      lualine_c = {'filename'},
-      lualine_x = {'encoding', 'fileformat', 'filetype'},
+      lualine_c = {
+        {
+          'filename',
+          icon = '',
+          path = 3, -- Exibe o caminho relativo 1 | Caminho absoluto 3
+          shorting_target = 40
+        }
+      },
+      lualine_x = {
+        'encoding', 
+        'fileformat', 
+        {
+          'filetype',
+          colored = true,  -- Habilita a coloração do ícone baseado no tipo do arquivo
+          icon_only = false,
+        }
+      },
       lualine_y = {'progress'},
-      lualine_z = {'location'}
+      lualine_z = {
+        {
+          'location',
+        },
+        {
+          'os.date("%H:%M")',
+          icon = '⏰',  -- Ícone de relógio como emoji
+          padding = { right = 1 },  -- Ajusta o espaçamento conforme necessário
+        }
+      }
     },
     inactive_sections = {
       lualine_a = {},
       lualine_b = {},
-      lualine_c = {'filename'},
-      lualine_x = {'location'},
-      lualine_y = {},
-      lualine_z = {}
+      lualine_c = {},
+      lualine_x = {'encoding', 'fileformat', 'filetype'},
+      lualine_y = {'progress'},
+      lualine_z = {'location'}
     },
     tabline = {},
     winbar = {},

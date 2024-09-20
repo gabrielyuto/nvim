@@ -14,9 +14,9 @@ local function highlight_word_under_cursor()
 end
 
 -- Autocomando para salvar alteracoes automaticamente
-api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
+api.nvim_create_autocmd({ 'InsertLeave' }, {
   pattern = '*.*',
-  command = 'update'
+  command = 'silent update'
 })
 
 -- Define um autocmd para chamar Neoformat antes de salvar o arquivo
@@ -25,3 +25,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
   command = "undojoin | Neoformat",
 })
+
