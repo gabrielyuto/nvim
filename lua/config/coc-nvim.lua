@@ -8,7 +8,7 @@ vim.g.coc_global_extensions = {
   'coc-pyright',    -- Suporte para Python
   'coc-explorer',   -- Explorer
   'coc-yaml',       -- Suporte yaml
-  'coc-solargraph'
+  'coc-solargraph',
 }
 
 -- Some servers have issues with backup files, see #649

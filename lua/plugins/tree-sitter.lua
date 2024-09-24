@@ -2,7 +2,15 @@ local function setup_tree_sitter()
   require'nvim-treesitter.configs'.setup {
   
   -- Linguagens que você deseja suportar
-  ensure_installed = { "lua", "python", "javascript", "html", "css" }, -- Adicione ou remova linguagens
+  ensure_installed = { 
+    "lua", 
+    "python", 
+    "javascript", 
+    "html", 
+    "css", 
+    "terraform",
+    "hcl"
+  }, -- Adicione ou remova linguagens
 
   -- Instala parsers de forma assíncrona
   sync_install = false,

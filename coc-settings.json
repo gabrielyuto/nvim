@@ -1,4 +1,14 @@
 {
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.pythonPrompt": false,
+
+  "languageserver": {
+    "terraform": {
+    "command": "/opt/homebrew/opt/terraform-lsp/bin/terraform-lsp",
+      "filetypes": ["terraform", "hcl", "tf"],
+      "rootPatterns": ["main.tf", ".terraform"],
+      "initializationOptions": {},
+      "settings": {} 
+    }
+  }
 }
