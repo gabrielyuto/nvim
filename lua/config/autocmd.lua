@@ -19,10 +19,3 @@ api.nvim_create_autocmd({ 'InsertLeave' }, {
   command = 'silent update'
 })
 
--- Define um autocmd para chamar Neoformat antes de salvar o arquivo
-vim.api.nvim_create_autocmd("BufWritePre", {
-  group = fmt_group,
-  pattern = "*",
-  command = "undojoin | Neoformat",
-})
-

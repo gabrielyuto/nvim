@@ -4,11 +4,27 @@
 
   "languageserver": {
     "terraform": {
-    "command": "/opt/homebrew/opt/terraform-lsp/bin/terraform-lsp",
+      "command": "/opt/homebrew/opt/terraform-lsp/bin/terraform-lsp",
       "filetypes": ["terraform", "hcl", "tf"],
       "rootPatterns": ["main.tf", ".terraform"],
       "initializationOptions": {},
-      "settings": {} 
+      "settings": {}
     }
-  }
+  },
+  
+  "yaml.schemas": {
+    "kubernetes": ["*.yml", "*.yaml"]
+  },
+  "yaml.format.enable": true,
+  
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/*.yaml",
+        "/*.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/garethr/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"
+    }
+  ]
 }
+

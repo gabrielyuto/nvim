@@ -3,12 +3,21 @@ local function setup_tree_sitter()
   
   -- Linguagens que você deseja suportar
   ensure_installed = { 
-    "lua", 
-    "python", 
-    "javascript", 
-    "html", 
-    "css", 
-    "terraform",
+    "bash",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "query",
+    "regex",
+    "tsx",
+    "typescript",
+    "vim",
+    "yaml",
+    "ruby",
     "hcl"
   }, -- Adicione ou remova linguagens
 
