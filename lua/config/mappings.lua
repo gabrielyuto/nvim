@@ -18,6 +18,7 @@ map('n', '<C-t>',      '<cmd>:NvimTreeToggle<cr>', { desc = 'Nvim Tree Open', si
 
 -- Terminal Mode
 map('t', '<C-/>', '<C-\\><C-n>:ToggleTerm<cr>', { desc = 'Hide Terminal' })
+map('t', '<Esc>', '<C-\\><C-n>', { desc = 'Change from Terminal to Normal mode' })
 
 -- Visual Mode
 map( 'v', '<C-c>', ':w !pbcopy<CR><Esc>', { desc = 'Copy to transfer area'})
