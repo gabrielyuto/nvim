@@ -3,7 +3,7 @@ return {
   dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
   config = function()
       require("mason-lspconfig").setup({
-          ensure_installed = { "pyright", "lua_ls", "gopls", "dartls" },
+          ensure_installed = { "pyright", "lua_ls", "dartls", "html", "css_variables", "cssls", "cssmodules_ls" },
           automatic_installation = true,
       })
 
