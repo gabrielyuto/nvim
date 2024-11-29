@@ -1,10 +1,9 @@
 local toggleterm = require 'toggleterm';
 
 toggleterm.setup({
-  config = setup_toogle_term,
   size = 20, -- Altura do terminal
   open_mapping = [[<c-\>]], -- Atalho para abrir/fechar o terminal
-  hide_numbers = true, -- Ocultar números de linha no terminal
+  hide_numbers = false, -- Ocultar números de linha no terminal
   shade_filetypes = {},
   shade_terminals = true, -- Aplicar sombreamento ao fundo do terminal
   shading_factor = '2', -- Grau de sombreamento

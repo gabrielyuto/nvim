@@ -1,6 +1,6 @@
 local lazy = require 'lazy';
 
-plugins = {
+local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { 
@@ -64,8 +64,8 @@ plugins = {
   },
   {
     "L3MON4D3/LuaSnip",
-    dependencies = {
-      "rafamadriz/friendly-snippets"
+    dependencies = { 
+      "rafamadriz/friendly-snippets" 
     },
   },
   {
@@ -80,9 +80,17 @@ plugins = {
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "saadparwaiz1/cmp_luasnip"
+      "hrsh7th/cmp-path"
     },
+  },
+  {
+    'nvim-flutter/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',
+    },
+    config = true,
   }
 }
 
