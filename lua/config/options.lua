@@ -46,3 +46,11 @@ commands([[colorscheme tokyonight]])
 vim.o.foldmethod = 'indent'  -- Usa a indentação para folding
 vim.o.foldlevel = 99         -- Garante que o código não seja recolhido ao abrir um arquivo
 vim.o.foldenable = true      -- Habilita o folding por padrão
+
+vim.diagnostic.config({
+  virtual_text = false, -- Desativa o texto flutuante
+  signs = true,         -- Mantém ícones nas laterais
+  underline = false,     -- Destaca erros no código
+  severity_sort = true, -- Ordena diagnósticos por severidade
+  update_in_insert = false
+})

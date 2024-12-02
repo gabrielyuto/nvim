@@ -91,7 +91,13 @@ local plugins = {
       'stevearc/dressing.nvim',
     },
     config = true,
-  }
+  },
+  {
+    "folke/trouble.nvim",
+    dependencies = { 
+      "nvim-tree/nvim-web-devicons" 
+    } 
+  },
 }
 
 lazy.setup(plugins)
