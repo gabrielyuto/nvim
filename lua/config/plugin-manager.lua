@@ -98,6 +98,21 @@ local plugins = {
       "nvim-tree/nvim-web-devicons" 
     } 
   },
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+    cmd = {
+        "LazyGit",
+        "LazyGitConfig",
+        "LazyGitCurrentFile",
+        "LazyGitFilter",
+        "LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim",
+    },
+  }
 }
 
 lazy.setup(plugins)
