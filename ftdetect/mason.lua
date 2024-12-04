@@ -2,14 +2,14 @@ local mason = require "mason";
 local mason_lspconfig = require "mason-lspconfig";
 
 mason.setup({
-  ui = {
-    border = "rounded",
-    icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗"
-    }
+ ui = {
+  border = "rounded",
+  icons = {
+   package_installed = "✓",
+   package_pending = "➜",
+   package_uninstalled = "✗"
   }
+ }
 })
 
 mason_lspconfig.setup({
@@ -17,6 +17,8 @@ mason_lspconfig.setup({
     "lua_ls",     -- lua
     "solargraph", --ruby
     "jdtls",      -- java
+    "ts_ls" -- typescript e js
   },
   automatic_installation = true,
 })
+

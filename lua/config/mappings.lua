@@ -20,19 +20,22 @@ map('n', '<C-/>',      '<cmd>:ToggleTerm direction=float<cr>', { desc = 'Floatin
 map('n', '<leader>tv', '<cmd>:ToggleTerm size=70 direction=vertical<cr>', { desc = 'Vertical Terminal' })
 map('n', '<leader>th', '<cmd>:ToggleTerm size=20 direction=horizontal<cr>', {desc = 'Horizontal Terminal'})
 map('n', '<leader>tt', '<cmd>:ToggleTerm direction=tab<cr>', { desc = 'Tab Terminal'})
-map('n', '<C-t>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-map('n', '<leader>r', ':NvimTreeRefresh<CR>', { noremap = true, silent = true })
-map('n', '<leader>n', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
-map('n', '<leader>da', '<Cmd>lua require("dapui").eval()<CR>', { desc = 'DAP-UI' })
-
-map('n','<leader>lg', '<cmd>LazyGit<cr>', { desc = 'LazyGit' })
+map('n', '<C-t>',      '<cmd>:NvimTreeToggle<CR>', { noremap = true, silent = true })
+map('n', '<leader>r',  '<cmd>:NvimTreeRefresh<cr>', { noremap = true, silent = true })
+map('n', '<leader>n',  '<cmd>:NvimTreeFindFile<cr>', { noremap = true, silent = true })
+map('n', '<leader>da', '<cmd>lua require("dapui").eval()<cr>', { desc = 'DAP-UI' })
+map('n','<leader>lg',  '<cmd>LazyGit<cr>', { desc = 'LazyGit' })
+map('n', '<Esc>',      '<cmd>:nohlsearch<cr>', { desc = 'exit find term' })
 
 -- Terminal Mode
 map('t', '<C-/>', '<C-\\><C-n>:ToggleTerm<cr>', { desc = 'Hide Terminal' })
 map('t', '<Esc>', '<C-\\><C-n>', { desc = 'Change from Terminal to Normal mode' })
 
 -- Visual Mode
-map( 'v', '<C-c>', ':w !pbcopy<CR><Esc>', { desc = 'Copy to transfer area'})
+map('v', '<C-c>', ':w !pbcopy<CR><Esc>', { desc = 'Copy to transfer area'})
+
+-- Visual-only Mode
+map('x', '<C-i>', 'I', { noremap = true, silent = true })
 
 -- DAP
 vim.fn.sign_define('DapBreakpoint', { text='🛑', texthl='', linehl='', numhl='' })
@@ -50,3 +53,5 @@ vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { noremap = true, silent = tru
 vim.keymap.set('n', '<leader>lc', ':LazyGitConfig<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>lf', ':LazyGitFilter<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>lcf', ':LazyGitFilterCurrentFile<CR>', { noremap = true, silent = true })
+
+

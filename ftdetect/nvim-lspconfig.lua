@@ -1,7 +1,9 @@
 local lspconfig = require "lspconfig";
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- CONFIGURACAO DART LSP
 lspconfig.dartls.setup {
+  capabilities = capabilities,
   cmd = { "fvm dart", "language-server", "--protocol=lsp" },
   filetypes = { "dart" },
   root_dir = lspconfig.util.root_pattern("pubspec.yaml"),
@@ -41,6 +43,7 @@ lspconfig.dartls.setup {
 
 -- CONFIGURACAO LUA LSP
 lspconfig.lua_ls.setup {
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -52,6 +55,7 @@ lspconfig.lua_ls.setup {
 
 -- CONFIGURACAO RUBY LSP
 lspconfig.solargraph.setup {
+ capabilities = capabilities,
   cmd = { "solargraph", "stdio" },
   filetypes = { "ruby" },
   init_options = {
@@ -73,6 +77,35 @@ lspconfig.solargraph.setup {
 
 
 -- CONFIGURACAO JAVA LSP
-lspconfig.jdtls.setup { 
-  cmd = { 'jdtls' } 
+lspconfig.jdtls.setup {
+  capabilities = capabilities,
+  cmd = {
+    "java",
+  } 
 }
+
+
+-- CONFIGURACAO JAVASCRIPT E TYPESCRIPT
+lspconfig.ts_ls.setup {
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    -- Desativar a formatação pelo tsserver (opcional, se for usar outro formatador)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end,
+  settings = {
+    javascript = {
+      inlayHints = {
+        includeInlayParameterNameHints = "all",
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+      },
+    },
+    typescript = {
+      inlayHints = {
+        includeInlayParameterNameHints = "all",
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+      },
+    },
+  },
+}
+

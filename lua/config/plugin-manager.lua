@@ -76,14 +76,6 @@ local plugins = {
     },
   },
   {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path"
-    },
-  },
-  {
     'nvim-flutter/flutter-tools.nvim',
     lazy = false,
     dependencies = {
@@ -112,7 +104,28 @@ local plugins = {
         "nvim-telescope/telescope.nvim",
         "nvim-lua/plenary.nvim",
     },
-  }
+  },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "williamboman/mason.nvim",
+      "jay-babu/mason-nvim-dap.nvim", 
+    },
+  },
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "hrsh7th/cmp-nvim-lsp", -- Integração com o LSP
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "onsails/lspkind-nvim", -- Ícones bonitos nas sugestões
+      "L3MON4D3/LuaSnip",     -- Suporte a snippets
+      "saadparwaiz1/cmp_luasnip"
+    }
+  },
 }
 
 lazy.setup(plugins)
