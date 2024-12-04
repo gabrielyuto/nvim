@@ -4,7 +4,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- CONFIGURACAO DART LSP
 lspconfig.dartls.setup {
   capabilities = capabilities,
-  cmd = { "fvm dart", "language-server", "--protocol=lsp" },
+  cmd = { "dart", "language-server", "--protocol=lsp" },
   filetypes = { "dart" },
   root_dir = lspconfig.util.root_pattern("pubspec.yaml"),
   init_options = {
