@@ -126,6 +126,9 @@ local plugins = {
       "saadparwaiz1/cmp_luasnip"
     }
   },
+  {
+    'mfussenegger/nvim-jdtls',
+  }
 }
 
 lazy.setup(plugins)

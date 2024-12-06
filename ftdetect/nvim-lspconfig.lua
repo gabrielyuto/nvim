@@ -75,16 +75,6 @@ lspconfig.solargraph.setup {
   end,
 }
 
-
--- CONFIGURACAO JAVA LSP
-lspconfig.jdtls.setup {
-  capabilities = capabilities,
-  cmd = {
-    "java",
-  } 
-}
-
-
 -- CONFIGURACAO JAVASCRIPT E TYPESCRIPT
 lspconfig.ts_ls.setup {
   capabilities = capabilities,
