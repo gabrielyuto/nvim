@@ -99,3 +99,16 @@ lspconfig.ts_ls.setup {
   },
 }
 
+
+-- CONFIGURACAO TERRAFORM
+lspconfig.terraformls.setup({
+    on_attach = function(client, bufnr)
+        local bufopts = { noremap=true, silent=true, buffer=bufnr }
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+    end,
+    capabilities = require("cmp_nvim_lsp").default_capabilities(),
+})
+
+-- CONFIGURACAO TFLINT (opcional)
+lspconfig.tflint.setup({})
