@@ -128,7 +128,7 @@ local plugins = {
   },
   {
     'mfussenegger/nvim-jdtls',
-  }
+  },
 }
 
 lazy.setup(plugins)
