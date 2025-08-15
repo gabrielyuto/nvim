@@ -39,7 +39,7 @@ commands('syntax on') -- Ativa o realce de sintaxe
 commands('filetype on') -- Ativa a detecção de tipo de arquivo
 commands('filetype plugin on') -- Ativa plugins de tipo de arquivo
 commands('filetype indent on') -- Ativa scripts de indentação de tipo de arquivo
-commands([[colorscheme tokyonight]])
+--commands([[colorscheme tokyonight]])
 
 
 -- Defina o método de fold

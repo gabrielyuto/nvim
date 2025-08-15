@@ -15,11 +15,6 @@ mason.setup({
 mason_lspconfig.setup({
   ensure_installed = {
     "lua_ls",     -- lua
-    "solargraph", --ruby
-    "jdtls",      -- java
-    "ts_ls", -- typescript e js
-    "terraform-ls", --terraform-ls
-    "tflint"
   },
   automatic_installation = true,
 })

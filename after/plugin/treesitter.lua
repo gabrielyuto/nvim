@@ -18,6 +18,7 @@ treesitter.setup({
     "yaml",
     "ruby",
     "hcl",
+    "scala"
   },
   highlight = {
     enable = true,

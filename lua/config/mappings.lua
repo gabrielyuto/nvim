@@ -20,7 +20,7 @@ map('n', '<C-/>',      '<cmd>:ToggleTerm direction=float<cr>', { desc = 'Floatin
 map('n', '<leader>tv', '<cmd>:ToggleTerm size=70 direction=vertical<cr>', { desc = 'Vertical Terminal' })
 map('n', '<leader>th', '<cmd>:ToggleTerm size=20 direction=horizontal<cr>', {desc = 'Horizontal Terminal'})
 map('n', '<leader>tt', '<cmd>:ToggleTerm direction=tab<cr>', { desc = 'Tab Terminal'})
-map('n', '<C-t>',      '<cmd>:NvimTreeToggle<CR>', { noremap = true, silent = true })
+map('n', '<leader>e',  '<cmd>:NvimTreeToggle<CR>', { noremap = true, silent = true })
 map('n', '<leader>r',  '<cmd>:NvimTreeRefresh<cr>', { noremap = true, silent = true })
 map('n', '<leader>n',  '<cmd>:NvimTreeFindFile<cr>', { noremap = true, silent = true })
 map('n', '<leader>da', '<cmd>lua require("dapui").eval()<cr>', { desc = 'DAP-UI' })
