@@ -129,6 +129,13 @@ local plugins = {
   {
     'mfussenegger/nvim-jdtls',
   },
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+  },
+  {
+    "github/copilot.vim",
+    lazy = false,  -- Carrega imediatamente
+  }
 }
 
 lazy.setup(plugins)

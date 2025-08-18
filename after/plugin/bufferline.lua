@@ -16,3 +16,5 @@ bufferline.setup({
     separator_style = "thick" -- Opcional: estilo do separador entre os buffers
   }
 })
+
+

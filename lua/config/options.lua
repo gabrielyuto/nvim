@@ -54,3 +54,7 @@ vim.diagnostic.config({
   severity_sort = true, -- Ordena diagnósticos por severidade
   update_in_insert = false
 })
+
+-- Define theme
+vim.opt.background = "dark" -- set this to dark or light
+vim.cmd.colorscheme "oxocarbon"
