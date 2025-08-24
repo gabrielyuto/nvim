@@ -58,3 +58,7 @@ vim.diagnostic.config({
 -- Define theme
 vim.opt.background = "dark" -- set this to dark or light
 vim.cmd.colorscheme "oxocarbon"
+
+-- Configuração para o vim-rspecvim
+--vim.g.rspec_command = 'call Send_to_Tmux("rspec {spec}\\n")'
+

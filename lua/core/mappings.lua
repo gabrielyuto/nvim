@@ -54,4 +54,8 @@ vim.keymap.set('n', '<leader>lc', ':LazyGitConfig<CR>', { noremap = true, silent
 vim.keymap.set('n', '<leader>lf', ':LazyGitFilter<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>lcf', ':LazyGitFilterCurrentFile<CR>', { noremap = true, silent = true })
 
-
+-- vim-rspec mappings
+map('n', '<leader>rs', '<cmd>:call RunCurrentSpecFile()<cr>', { desc = 'Find files' })
+map('n', '<leader>rn', '<cmd>:call RunNearestSpec()<cr>', { desc = 'Live grep' }) 
+map('n', '<leader>rl', '<cmd>:call RunLastSpec()<cr>', { desc = 'List buffers' })
+map('n', '<leader>ra', '<cmd>:call RunAllSpecs()<cr>', { desc = 'Find help' })

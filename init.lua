@@ -1,6 +1,4 @@
-require 'config.lazy-installer'
-require 'config.plugin-manager'
-require 'config.options'
-require 'config.mappings'
-require 'config.autocmd'
-
+require 'core.lazy'
+require 'core.options'
+require 'core.mappings'
+require 'core.autocmd'
